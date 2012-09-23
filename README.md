@@ -11,7 +11,7 @@ Then copy the lib folder under your root directory.
 
 In your main application file you can call a basic Google service as follows:
  from google.services import GoogleServiceHandler
- # Create a Drive service
+ # Create a User service
     service = CreateUserInfo()
     if service is None:
       return
