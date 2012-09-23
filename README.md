@@ -10,16 +10,17 @@ as follows:
 Then copy the lib folder under your root directory.
 
 In your main application file you can call a basic Google service as follows:
- from google.services import GoogleServiceHandler
- # Create a User service
-    service = CreateUserInfo()
-    if service is None:
-      return
-    try:
+
+	 from google.services import GoogleServiceHandler
+	 # Create a User service
+	    service = CreateUserInfo()
+	    if service is None:
+	      return
+	    try:
 		#do your stuff
-	except AccessTokenRefreshError:
-	#when token isn't refreshed user is redirected
-      self.RedirectAuth()
+	    except AccessTokenRefreshError:
+		#when token isn't refreshed user is redirected
+	   	self.RedirectAuth()
 
 You can add more Google Services by creating trivial functions in the
 GoogleServiceHandler object in the services.py script under the google package.
