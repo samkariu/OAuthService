@@ -3,6 +3,7 @@ Google Services.Most of this code is derived from the Google Python Client API s
 
 Make sure you have the Google Python Client API installed in your environment
 as follows:
+
 1. Install 'easy_install' python package manager.
 2. Run this command 
    $ easy_install --upgrade google-api-python-client
