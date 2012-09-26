@@ -62,37 +62,7 @@ def CreateService(service, version, creds):
   # Build a service from the passed discovery document path
   return build(service, version, http=http)
 
-class DriveState(object):
-  """Store state provided by Drive."""
-
-  def __init__(self, state):
-    """Create a new instance of drive state.
-
-    Parse and load the JSON state parameter.
-
-    Args:
-      state: State query parameter as a string.
-    """
-    if state:
-      state_data = json.loads(state)
-      self.action = state_data['action']
-      self.ids = map(str, state_data.get('ids', []))
-    else:
-      self.action = 'create'
-      self.ids = []
-      
-  @classmethod
-  def FromRequest(cls, request):
-    """Create a Drive State instance from an HTTP request.
-
-    Args:
-      cls: Type this class method is called against.
-      request: HTTP request.
-    """
-    return DriveState(request.get('state'))
-
-
-class BaseDriveHandler(webapp2.RequestHandler):
+class GoogleServiceHandler(webapp2.RequestHandler):
     
     """Base request handler for drive applications.
     Adds Authorization support for Drive.

@@ -9,6 +9,14 @@ as follows:
 
 Then copy the lib folder under your root directory.
 
+Edit your client_secrets.json (lib/google/client_secrets.json) by inserting you
+own client ID, client secret, and list of valid redirect URIs.
+
+The client ID and client secret for an application are created when an application is registered in
+the Google APIs Console and the OAuth 2.0 client IDs are generated. You can view these
+in the API Access tab of a project.
+You can read more from https://developers.google.com/drive/examples/python#setting_up_the_client_id_client_secret_and_other_oauth_20_parameters
+
 In your main application file you can call a basic Google service as follows:
  from google.services import GoogleServiceHandler
  # Create a User service
